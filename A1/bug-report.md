@@ -30,7 +30,7 @@ I just add using namespace std above the code and both of errors get corrected.
 
 5. The corresponding bug-free code or code snippet is:
 
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
