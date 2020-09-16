@@ -53,6 +53,7 @@ BUG 2
 
 
 1. The incorrect original code or code snippit that you wrote:
+
 #include <iostream>
 
 using namespace std;
@@ -152,5 +153,6 @@ int main()
 
 
 What is the take-away message from this bug?
+
 Every C++ statement ends up with semicolon so must put it. otherwise code may get executed but shows wrong output.
 
