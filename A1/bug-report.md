@@ -1,6 +1,6 @@
 BUG 1
 1. The incorrect original code or code snippit that you wrote:
-#include<iostream>
+#include <iostream>
   
   int main ()
   {
@@ -30,7 +30,7 @@ I just add using namespace std above the code and both of errors get corrected.
 
 5. The corresponding bug-free code or code snippet is:
 
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
