@@ -17,12 +17,12 @@ BUG 1
 
 2. What bug does the original code have?
 
-The above code does not use using namespace std that is the declaration for cout and endl. when i compile the above code with this bug i get 2 errors. The errors show that cout and endl does not declared in this scope.
+The above code does not use using namespace std that is the declaration for cout and endl. 
 
 
 3. What misunderstanding of C++ concepts lead you to this incorrect code?
 
-when i compile the above code with this bug i get 2 errors. The errors show that cout and endl does not declared in this scope. First i do not get what mistake i had made but i read the whole code again and get my mistake.
+when i compile the above code with this bug i get 2 errors. The errors show that cout and endl does not declared in this scope. First i do not get what mistake i had made that is all variables are declared before using but i read the whole code again and get my mistake.
 
 4. How to correct the bug?
 
@@ -73,7 +73,7 @@ int main()
 In this code does not distance variable is not declared.
 
 3. What misunderstanding of C++ concepts lead you to this incorrect code?
-This code really very big. Due to this i got 2 errors and 71 warnings. Errors show overload function with no contextual information.
+This mistake is really very silly. Due to this i got 2 errors and 71 warnings. Errors show overload function with no contextual information.
 
 4. How to correct the bug?
 it takes very time to got the mistake. On checking twice i get to know that i had not declared the distance variable.
@@ -112,12 +112,12 @@ using namespace std;
 
 int main()
 {
-    int speed {20};
-    int time  {10};
-    int distance;
+    float force{172.5};
+    float area  {27.5};
+    float pressure;
     
-    distance = speed*time;
-    cout<< " the distance is "<< distance <<endl //bug is here
+    pressure= area/force;
+    cout<< " the pressure is "<< pressure <<endl
     return 0;
     
 }
@@ -141,12 +141,12 @@ using namespace std;
 
 int main()
 {
-    int speed {20};
-    int time  {10};
-    int distance;
+    float force{172.5};
+    float area  {27.5};
+    float pressure;
     
-    distance = speed*time;
-    cout<< " the distance is "<< distance <<endl;
+    pressure= area/force;
+    cout<< " the pressure is "<< pressure <<endl;
     return 0;
     
 }
@@ -154,5 +154,5 @@ int main()
 
 What is the take-away message from this bug?
 
-Every C++ statement ends up with semicolon so must put it. otherwise code may get executed but shows wrong output.
+Every C++ statement ends up with semicolon so must put it. Otherwise code may get executed but shows wrong output.
 
