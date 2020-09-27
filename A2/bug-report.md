@@ -1,6 +1,7 @@
 
 Bug 1
 1. The incorrect original code or code snippit that you wrote:
+
 #include <iostream>
 using namespace std;
 int main()
@@ -82,6 +83,7 @@ C++ statements are end with semicolon so one must be careful with it.
 
 Bug 2
 1. The incorrect original code or code snippit that you wrote:
+
 #include<iostream>
 
 using namespace std;
