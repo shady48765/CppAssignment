@@ -1,1 +1,79 @@
+#include <iostream>
+#include <string>
+#include <vector>
 
+
+using namespace std;
+
+int main()
+{
+    //declaring the time variable
+    int spaces = 0, letters = 0;
+    string sentence, word, wordStageTwo, shuffledWord;
+    char ch, upCh, littleSpace, firstLetter;
+    vector<string> wordsArray, shuffled;
+    vector<char> wordChar;
+
+    //asking for the input
+    cout << "Enter the sentence here: ";
+    getline(cin, sentence);
+
+    //adding space at last of the accepted string
+    littleSpace = ' ';
+    sentence.push_back(littleSpace);
+
+    //looping through the sentence and adding word to the vector array
+    for (int i = 0; i < sentence.length(); ++i) {
+        char ch = sentence[i];
+
+        if (ch == ' ') {
+            word = sentence.substr((i - letters), letters);
+            wordsArray.push_back(word);
+            letters = 0;
+        }
+        else if (ch != ' ') {
+            ++letters;
+        }
+    }
+
+    //looping through the wordArray vector
+    for (int i = 0; i < wordsArray.size(); ++i) {
+        wordStageTwo = wordsArray.at(i);
+
+        //adding every character of the word of a vector
+        for (int y = 0; y < wordStageTwo.length(); ++y) {
+            upCh = toupper(wordStageTwo[y]);
+            wordChar.push_back(upCh);
+        }
+
+        //saving the first letter in a variable
+        firstLetter = wordChar[0];
+
+        //deleting the first letter from the vector
+        wordChar.erase(wordChar.begin());
+
+        //adding first letter to the last position
+        wordChar.push_back(firstLetter);
+
+        //joining the words
+        for (int z = 0; z < wordChar.size(); ++z) {
+            shuffledWord += wordChar[z];
+        }
+
+        //adding KPU at the last of the word
+        shuffledWord += "KPU";
+
+        //adding the last iteration of the word to final vector
+        shuffled.push_back(shuffledWord);
+
+        //Clearing the vectors, making space for the next word
+        shuffledWord = "";
+        wordChar.clear();
+    }
+
+    //displaying the shuffled words
+    for (int v = 0; v < shuffled.size(); ++v) {
+        cout << shuffled[v] << " ";
+    }
+
+}
