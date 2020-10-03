@@ -406,4 +406,5 @@ int main()
 }
 
 6. What is the take-away message from this bug?
+
 sentences are read by getline function and we cannot read them by cin.
