@@ -29,6 +29,7 @@ using namespace std;
     
     cylinder cyl; // creating object of class
     cyl.set_values (4.9, 5.7); // testing case
+    cout<<" volume of cylinder is "<<cyl.getvolume();
     cyl.set_values (5, 3.99);
     cout<<" volume of cylinder is "<<cyl.getvolume();
     return 0;
