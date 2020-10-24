@@ -4,7 +4,7 @@
 using namespace std;
 
 
-    class cylinder 
+    class cylinder // defining  a class
     {
     private:
         double height, radius;
@@ -12,13 +12,13 @@ using namespace std;
       void set_values (double, double);
       double getvolume ()
       { 
-          return 3.14 * radius * radius * height;
+          return 3.14 * radius * radius * height; // calculating volume of cylinder in class as we cannot access private function outside of class
       
       }
   
     };
     
-    void cylinder:: set_values ( double r, double h)
+    void cylinder:: set_values ( double r, double h) // accessing the private variables of class by public function
     {
         radius = r;
         height = h;
@@ -27,8 +27,8 @@ using namespace std;
   
     int main(){
     
-    cylinder cyl;
-    cyl.set_values (4.9, 5.7);
+    cylinder cyl; // creating object of class
+    cyl.set_values (4.9, 5.7); // testing case
     cyl.set_values (5, 3.99);
     cout<<" volume of cylinder is "<<cyl.getvolume();
     return 0;
