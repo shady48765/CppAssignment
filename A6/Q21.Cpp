@@ -3,7 +3,6 @@
 using namespace std;
 
 
-int i = 0;
 class Payroll  // defining class payroll
  { 
    private: 
